@@ -23,6 +23,6 @@ Solution:- We have came with the solution of iCharge- EV Charging station. Where
 - Google API
 
 # Contributors
-[Ritik Raj Pandey](https://github.com/rithikrajyt)
-[Sarthak Khandelwal](https://github.com/skk401)
+[Ritik Raj Pandey](https://github.com/rithikrajyt)<br>
+[Sarthak Khandelwal](https://github.com/skk401)<br>
 [Anukalp Jain](https://github.com/anukalp1723)
