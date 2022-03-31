@@ -22,18 +22,21 @@
 
     <div class="jumbotron">
         <div class="container-fluid">
-            <h1>Search for any Charging Station near you.</h1>
-            <p>Save your valuable time and energy.</p>
+            <!-- <h1>Search for any Charging Station near you.</h1>
+            <p>Save your valuable time and energy.</p> -->
+            <div class="nine">
+                <h1>Search for any Charging<br> Station Near You<span>Save your valuable Time and Energy</span></h1>
+            </div>
             <form class="form-horizontal">
                 <div class="form-group">
-                    <label for="from" class="col-xs-2 control-label"><i class="far fa-dot-circle"></i></label>
+                    <label for="from" class="col-xs-1 control-label"><i class="far fa-dot-circle"></i></label>
                     <div class="col-xs-4">
                         <input type="text" id="from" placeholder="Origin" class="form-control">
                     </div>
                </div>
                <div class="form-group">
                 
-                    <label for="to" class="col-xs-2 control-label"><i class="fas fa-map-marker-alt"></i></label>
+                    <label for="to" class="col-xs-1 control-label"><i class="fas fa-map-marker-alt"></i></label>
                     <div class="col-xs-4">
                         <input type="text" id="to" placeholder="Destination" class="form-control">
                     </div>
@@ -42,8 +45,8 @@
                  
             </form>
 
-            <div class="col-xs-offset-2 col-xs-10">
-                <button class="btn btn-info btn-lg " onclick="calcRoute();"><i class="fas fa-map-signs"></i></button>
+            <div class="col-xs-offset-1 col-xs-9">
+                <button class="btn btn-info btn-lg "  onclick="calcRoute();">Search<i class="fas fa-map-signs"></i></button>
             </div>
         </div>
         <div class="container-fluid">
@@ -69,7 +72,16 @@
             <h2>Select date of booking:</h2>
             <br>
             <input type='date' name='dateofbirth' id='dateofbirth'>
+            <h2>Select Time of booking:</h2>
+            <br>
+            <input type='time' name='time' id='time'>
         </div>
+        <div id="time" style="display :none">
+            <h2>Select Time of booking:</h2>
+            <br>
+            <input type='time' name='time' id='time'>
+        </div>
+    
 
         <div id="time">
 

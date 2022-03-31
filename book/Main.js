@@ -1,5 +1,6 @@
 ﻿//javascript.js
 //set map options
+
 var myLatLng = { lat: 12.9092  , lng: 77.5666 };
 var c1={ lat:  12.903936075306595  ,  lng: 77.57334423075413 };
 var c2={ lat:  12.906267430155693  ,  lng: 77.58448893218283 };
@@ -8,6 +9,12 @@ var c2={ lat:  12.906267430155693  ,  lng: 77.58448893218283 };
 var c3={ lat:   12.921964959678385  ,  lng: 77.58479742025614 };
 
 var c4={ lat:   12.934966217212586  ,  lng: 77.57435164085942 };
+
+
+
+
+
+
 
 
 
@@ -28,6 +35,25 @@ function success(position){
         map:  map ,
         position: coords
     });
+   
+      
+      // This is making the Geocode request
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({ 'latLng': coords }, function (results, status) {
+          if (status !== google.maps.GeocoderStatus.OK) {
+              alert(status);
+          }
+          // This is checking to see if the Geoeode Status is OK before proceeding
+          if (status == google.maps.GeocoderStatus.OK) {
+             
+              var address = (results[0].formatted_address);
+             
+              
+                input1.value=address;
+              
+          }
+      });
+  
 }
 function failure(){
 
@@ -35,7 +61,7 @@ function failure(){
 }
 var mapOptions = {
     center: myLatLng,
-    zoom: 12,
+    zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
 };
@@ -91,15 +117,16 @@ function calcRoute() {
             book.innerHTML = "<h1>Book a  Slot for Charging your vehicle</h1>";
 
             const schdule = document.querySelector('#schdule');
-            schdule.innerHTML = "<div class='alert-info'> Booking Slot At: " + document.getElementById("to").value + ".<br /> Driving distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Driving time  : " + result.routes[0].legs[0].duration.text +    ".</div>";
+            schdule.innerHTML = "<div class='alert-info'> <h4>Booking Slot At:<h4> " + document.getElementById("to").value + ".<br /> Driving distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Driving time  : " + result.routes[0].legs[0].duration.text +    ".</div>";
 
              
             const date = document.querySelector('#date');
-            date.style.display = "block";
+            date.style.display = "block ";
 
 
-              const time = document.querySelector('#time');
-            time.innerHTML = "<h2>Select time of booking:</h2> <br /><input type='time' id='time'> " + ".</div>";
+            const time = document.querySelector('#time');
+            // time.innerHTML = "<h2>Select time of booking:</h2> <br /><input type='time' id='time'> " + ".</div>";
+            time.style.display = "block";
 
             const yes = document.querySelector('#yes');
             yes.innerHTML = "<button type='button' class='btn btn-primary btn-lg' id='yes' onclick='myFunction()'>Schdule now </button> " + ".</div>";
@@ -115,7 +142,7 @@ function calcRoute() {
             map.setCenter(myLatLng);
 
             //show error message
-            output.innerHTML = "<div class='alert-danger'><i class='fas fa-exclamation-triangle'></i> Select a valid location.</div>";
+            output.innerHTML = "<div class='alert-danger'><i class='fas fa-exclamation-triangle'></i> Please select a valid location.</div>";
 
 
            
@@ -225,6 +252,7 @@ var mark=new google.maps.Marker({
 
 
 
- 
+  
+  
  
   
