@@ -1,4 +1,4 @@
-# Mercedes_Hackathon (iCharge)
+# iCharge
 This repo contains our project file for hackathon conducted on Hackerearth.
 
 # About
