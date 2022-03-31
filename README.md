@@ -1,5 +1,5 @@
 # iCharge
-This repo contains our project file for hackathon conducted on Hackerearth.
+This repo contains our project file for hackathon.
 
 # About
 iCharge- A one stop solution for all your Charging needs.
